@@ -195,7 +195,7 @@
 "Invitation" = "Invitation";
 "Invite" = "Invite";
 "It was not possible to access camera or microphone. Please check privacy settings" = "It was not possible to access camera or microphone. Please check privacy settings";
-"It was not possible to access camera. Please check in privacy settings that you have granted Snikket access to the camera." = "It was not possible to access camera. Please check in privacy settings that you have granted Snikket access to the camera.";
+"It was not possible to access camera. Please check in privacy settings that you have granted Otherhome Messenger access to the camera." = "It was not possible to access camera. Please check in privacy settings that you have granted Otherhome Messenger access to the camera.";
 
 /* Error text: upload failed due to permissions */
 "It was not possible to access the file." = "It was not possible to access the file.";
@@ -349,7 +349,7 @@
 "Resend" = "Resend";
 "Ringing..." = "Ringing...";
 "Save" = "Save";
-"Scanned QR code is not valid for Snikket." = "Scanned QR code is not valid for Snikket.";
+"Scanned QR code is not valid for Otherhome Messenger." = "Scanned QR code is not valid for Otherhome Messenger.";
 "Search channels" = "Search channels";
 
 /* Shown above a choice list of the user's accounts */

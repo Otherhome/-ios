@@ -1,0 +1,60 @@
+{
+  "originHash" : "38b00a3bab062cae54d397a033d39d5e3d797c79f8dfb5ed34a7132da8535329",
+  "pins" : [
+    {
+      "identity" : "flex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FLEXTool/FLEX.git",
+      "state" : {
+        "revision" : "e0acf59d06d498041f65bbea1e5914b6e4b39733",
+        "version" : "5.22.10"
+      }
+    },
+    {
+      "identity" : "hsluv-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hsluv/hsluv-swift.git",
+      "state" : {
+        "revision" : "9dee4378180f2a9a33c96bc20284cf64158dbe1b",
+        "version" : "2.1.0"
+      }
+    },
+    {
+      "identity" : "libsignal",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/libsignal",
+      "state" : {
+        "revision" : "d23d5af0d729cf66b93cea607f3f84a34b9fddfd",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "sentry-cocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getsentry/sentry-cocoa/",
+      "state" : {
+        "revision" : "5421f94cc859eb65f5ae3866165a053aa634431e",
+        "version" : "8.32.0"
+      }
+    },
+    {
+      "identity" : "tigase-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/tigase-swift",
+      "state" : {
+        "revision" : "d3953dcea80010ad433fa96d7ca6b989bf58850c",
+        "version" : "2.1.3"
+      }
+    },
+    {
+      "identity" : "tigase-swift-omemo",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tigase/tigase-swift-omemo/",
+      "state" : {
+        "revision" : "4c997df9a3a686b7e522ddffa4d2f2c070a94fa0",
+        "version" : "1.1.3"
+      }
+    }
+  ],
+  "version" : 3
+}

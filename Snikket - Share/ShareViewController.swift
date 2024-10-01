@@ -83,7 +83,7 @@ class ShareViewController: SLComposeServiceViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         let dbURL = DBConnection.mainDbURL();
-        if !FileManager.default.fileExists(atPath: dbURL.path) {
+        if !FileManager.default.fileExists(atPath: dbURL!.path) {
             let controller = UIAlertController(title: "Please launch application from the home screen before continuing.", message: nil, preferredStyle: .alert);
             controller.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { (action) in
                 self.extensionContext?.cancelRequest(withError: ShareError.firstRun);

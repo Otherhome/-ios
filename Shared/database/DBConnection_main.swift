@@ -23,24 +23,36 @@ import Foundation
 
 extension DBConnection {
 
-    public static func mainDbURL() -> URL {
-        let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.snikket.shared")!;
-        return containerURL.appendingPathComponent("snikket_main.db");
+    public static func mainDbURL() -> URL? {
+        if let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.adelaideinside.otherhome.ios.Shared") {
+            return containerURL.appendingPathComponent("snikket_main.db")
+        } else {
+            return nil
+        }
     }
     
     public private(set) static var createIfNotExist: Bool = false;
         
     public static func migrateToGroupIfNeeded() throws {
-        let dbURL = mainDbURL();
-
-        if !FileManager.default.fileExists(atPath: dbURL.path) {
-            let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true);
-            let documentDirectory = paths[0];
-            let path = documentDirectory.appending("/mobile_messenger1.db");
-            if FileManager.default.fileExists(atPath: path) {
-                try FileManager.default.moveItem(atPath: path, toPath: dbURL.path);
+            guard let dbURL = mainDbURL() else {
+                print("Error: Unable to get the container URL.")
+                return
             }
-        }
+
+            if !FileManager.default.fileExists(atPath: dbURL.path) {
+                let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                if let documentDirectory = paths.first {
+                    let oldPath = documentDirectory.appending("/mobile_messenger1.db")
+                    if FileManager.default.fileExists(atPath: oldPath) {
+                        do {
+                            try FileManager.default.moveItem(atPath: oldPath, toPath: dbURL.path)
+                        } catch {
+                            print("Error: Unable to move the file - \(error.localizedDescription)")
+                            throw error
+                        }
+                    }
+                }
+            }
         
         createIfNotExist = true;
     }

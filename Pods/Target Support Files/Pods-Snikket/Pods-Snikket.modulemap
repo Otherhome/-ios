@@ -1,0 +1,6 @@
+framework module Pods_Snikket {
+  umbrella header "Pods-Snikket-umbrella.h"
+
+  export *
+  module * { export * }
+}

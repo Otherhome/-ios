@@ -24,12 +24,17 @@ import Shared
 
 extension DBConnection {
     public static let main: DBConnection = {
-        let dbURL = mainDbURL();
-
-        if (!FileManager.default.fileExists(atPath: dbURL.path)) && (!createIfNotExist)  {
-            return try! DBConnection.initialize(dbPath: ":memory:");
+        if let dbURL = mainDbURL() {
+            if FileManager.default.fileExists(atPath: dbURL.path) || createIfNotExist {
+                return try! DBConnection.initialize(dbPath: dbURL.path)
+            } else {
+                return try! DBConnection.initialize(dbPath: ":memory:")
+            }
         } else {
-            return try! DBConnection.initialize(dbPath: dbURL.path);
+            // URL이 nil일 경우
+            print("Warning: mainDbURL() returned nil. Using in-memory database.")
+            return try! DBConnection.initialize(dbPath: ":memory:")
         }
-    }();
+    }()
 }
+

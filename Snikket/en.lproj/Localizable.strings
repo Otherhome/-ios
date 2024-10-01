@@ -299,7 +299,7 @@
 "It was not possible to access camera or microphone. Please check privacy settings" = "It was not possible to access camera or microphone. Please check privacy settings";
 
 /* No comment provided by engineer. */
-"It was not possible to access camera. Please check in privacy settings that you have granted Snikket access to the camera." = "It was not possible to access camera. Please check in privacy settings that you have granted Snikket access to the camera.";
+"It was not possible to access camera. Please check in privacy settings that you have granted Otherhome Messenger access to the camera." = "It was not possible to access camera. Please check in privacy settings that you have granted Otherhome Messenger access to the camera.";
 
 /* Error text: upload failed due to permissions */
 "It was not possible to access the file." = "It was not possible to access the file.";
@@ -397,7 +397,7 @@
 "New call..." = "New call...";
 
 /* Message input area placeholder when empty */
-"New Message" = "New Message";
+"New Message" = "New Message - ";
 
 /* No comment provided by engineer. */
 "New private group chat" = "New private group chat";
@@ -556,7 +556,7 @@
 "Save" = "Save";
 
 /* No comment provided by engineer. */
-"Scanned QR code is not valid for Snikket." = "Scanned QR code is not valid for Snikket.";
+"Scanned QR code is not valid for Otherhome Messenger." = "Scanned QR code is not valid for Otherhome Messenger.";
 
 /* No comment provided by engineer. */
 "Search channels" = "Search channels";

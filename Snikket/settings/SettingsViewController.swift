@@ -65,9 +65,9 @@ class SettingsViewController: UITableViewController {
         if(filemgr.fileExists(atPath: toPath.path)) {
             try! filemgr.removeItem(at: toPath);
         }
-        try! filemgr.copyItem(atPath: fromPath.path, toPath: toPath.path);
+        try! filemgr.copyItem(atPath: fromPath!.path, toPath: toPath.path);
         
-        let walFromPath = URL(string: fromPath.absoluteString + "-wal");
+        let walFromPath = URL(string: fromPath!.absoluteString + "-wal");
         let walToPath = URL(string: toPath.absoluteString + "-wal");
 
         if(filemgr.fileExists(atPath: walFromPath!.path)) {

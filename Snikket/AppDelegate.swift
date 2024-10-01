@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        if(isSimulatorOrTestFlight()) {
+        if(false) {
             if let sentry_dsn = Bundle.main.infoDictionary?["Sentry DSN"] as? String {
                 SentrySDK.start { options in
                     options.dsn = sentry_dsn

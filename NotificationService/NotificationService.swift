@@ -139,7 +139,7 @@ class NotificationService: UNNotificationServiceExtension {
 extension DBConnection {
     static func main<T>(execute: @escaping (DBConnection) throws ->T) throws -> T {
         let dbURL = mainDbURL();
-        let connection = try DBConnection.init(dbPath: dbURL.path);
+        let connection = try DBConnection.init(dbPath: dbURL!.path);
         return try execute(connection);
     }
 }
